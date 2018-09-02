@@ -1,4 +1,14 @@
-class Dog
+class Pet 
+    def initialize(name)
+        @name=name
+    end
+    def pat
+        puts "#{@name} says: Thanks for the pat!"
+    end
+end
+
+
+class Dog < Pet
     attr_accessor :name, :age, :location, :walk, :distance, :total_distance, :allwalks
     def initialize(name,age,location)
         @name=name
