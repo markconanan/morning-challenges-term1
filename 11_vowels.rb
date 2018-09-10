@@ -15,5 +15,15 @@
 #
 
 def vowels (string)
-  # Your code here
+  array=string.chars
+  vowels=["a","e","i","o","u"]
+  includedvowels=[]
+  array.each do |letters|
+  if vowels.include?(letters)
+    includedvowels.push(letters)
+  end
 end
+puts "#{includedvowels}"
+end
+
+vowels("a b c d e f g h i j k")
