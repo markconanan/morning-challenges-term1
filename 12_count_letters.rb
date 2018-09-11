@@ -16,8 +16,16 @@
 
 def count_letters (string)
   result = {} # You'll need an empty hash to get started!
-  
-  # Your code here
-
-  result # return the hash
+  array=string.chars
+  array.each do |letter|
+  if result.has_key?("#{letter}")
+    result["#{letter}"]+=1
+  else
+    result["#{letter}"]=1
+  end
 end
+  # Your code here
+  return result # return the hash
+end
+
+count_letters("hello")
