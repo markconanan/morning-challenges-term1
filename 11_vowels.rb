@@ -14,16 +14,24 @@
 # ruby tests/04_vowels_test.rb
 #
 
+# def vowels (string)
+#   array=string.chars
+#   vowels=["a","e","i","o","u"]
+#   includedvowels=[]
+#   array.each do |letters|
+#   if vowels.include?(letters)
+#     includedvowels.push(letters)
+#   end
+# end
+# puts "#{includedvowels}"
+# end
+
+
+
+# using regex
 def vowels (string)
-  array=string.chars
-  vowels=["a","e","i","o","u"]
-  includedvowels=[]
-  array.each do |letters|
-  if vowels.include?(letters)
-    includedvowels.push(letters)
-  end
-end
-puts "#{includedvowels}"
+  vowels=string.scan(/[aeiou]/i)
+  puts vowels
 end
 
 vowels("a b c d e f g h i j k")
