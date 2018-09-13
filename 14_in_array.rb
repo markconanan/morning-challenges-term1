@@ -17,4 +17,5 @@
 
 def in_array (needle, haystack)
   # Your code here
+  haystack.include?(needle)
 end
