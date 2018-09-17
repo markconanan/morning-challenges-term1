@@ -19,5 +19,9 @@
 #
 
 def unique (mylist)
-  # Your code here
+array=[]
+  for element in mylist do
+      array.push(element) if array.include?(element)==false 
+  end
+return array
 end
