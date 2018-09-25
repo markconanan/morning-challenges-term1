@@ -21,5 +21,17 @@
 #
 
 class Dictionary
-  # Your code here
+  attr_accessor :list
+  def initialize
+    @list={}
+  end
+  def add_word(word, meaning)
+    @list[word]=meaning
+  end
+  def lookup(word)
+    @list[word]
+  end
+  def total_words
+    @list.count
+  end
 end
