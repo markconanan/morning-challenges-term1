@@ -23,5 +23,10 @@
 #
 
 def ExesAndOhs(string)
-  # yo' co' here
+  x=string.downcase.chars
+  if x.count("o")==x.count("x")
+    return true
+  else
+    return false
+  end
 end
