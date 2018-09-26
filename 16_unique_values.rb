@@ -19,9 +19,15 @@
 #
 
 def unique (mylist)
+<<<<<<< HEAD
 array=[]
   for element in mylist do
       array.push(element) if array.include?(element)==false 
   end
 return array
+=======
+  hash = {}
+  mylist.each { |x| hash[x] = true }
+  hash.keys
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
 end

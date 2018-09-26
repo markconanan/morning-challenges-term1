@@ -21,6 +21,7 @@
 #
 
 class Dictionary
+<<<<<<< HEAD
   attr_accessor :list
   def initialize
     @list={}
@@ -33,5 +34,18 @@ class Dictionary
   end
   def total_words
     @list.count
+=======
+  def initialize
+    @words = {}      
+  end
+  def add_word(key, val)
+    @words[key] = val
+  end
+  def total_words
+    @words.length
+  end
+  def lookup(key)
+    @words[key]
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
   end
 end

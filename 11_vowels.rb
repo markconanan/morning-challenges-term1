@@ -14,6 +14,7 @@
 # ruby tests/04_vowels_test.rb
 #
 
+<<<<<<< HEAD
 # def vowels (string)
 #   array=string.chars
 #   vowels=["a","e","i","o","u"]
@@ -35,3 +36,8 @@ def vowels (string)
 end
 
 vowels("a b c d e f g h i j k")
+=======
+def vowels (string)
+  string.scan(/[aeiou]/i)
+end
+>>>>>>> b028df5d644e116007105a13b9522c8e1282f993
