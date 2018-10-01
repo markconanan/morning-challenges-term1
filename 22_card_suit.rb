@@ -9,5 +9,6 @@
 
 def define_suit(card)
   # Good luck
+  card.chars
 end
 
