@@ -19,18 +19,32 @@ require_relative '24_card_game'
 
 class Deck
   def initialize
-    # Create a new array of cards
+    @deck=[]
+    @number=0
+    while number<14
+      number+=1
+      @deck.push(Card.new(:heart,@number))
+      @deck.push(Card.new(:spade,@number))
+      @deck.push(Card.new(:diamond,@number))
+      @deck.push(Card.new(:clubs,@number))
+    end
+end
+    
+    def shuffle
+      # Shuffle the remaining cards
+      @deck.shuffle
+    end
+    
+    def draw(n=1)
+      # Draw (remove) n cards from the deck. Return those cards
+      while n>0
+        n-=1
+        @draw=@deck.sample
+    end
+    
+    def count
+      # How many cards are left?
+      @deck.count
+    end
   end
   
-  def shuffle
-    # Shuffle the remaining cards
-  end
-
-  def draw(n=1)
-    # Draw (remove) n cards from the deck. Return those cards
-  end
-
-  def count
-    # How many cards are left?
-  end
-end
