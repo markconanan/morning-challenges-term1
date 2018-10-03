@@ -18,11 +18,12 @@
 require_relative '24_card_game'
 
 class Deck
+  attr_accessor :deck, :draw
   def initialize
     @deck=[]
     @number=0
-    while number<14
-      number+=1
+    while @number<12
+      @number+=1
       @deck.push(Card.new(:heart,@number))
       @deck.push(Card.new(:spade,@number))
       @deck.push(Card.new(:diamond,@number))
@@ -36,15 +37,19 @@ end
     end
     
     def draw(n=1)
+      @cards=[]
+      @number=0
       # Draw (remove) n cards from the deck. Return those cards
-      while n>0
-        n-=1
-        @draw=@deck.sample
+      until @number==n
+      @number+=1
+      @cards.new(@deck.pop)
+      end
+      @cards
     end
     
     def count
       # How many cards are left?
-      @deck.count
+      @deck.length
     end
   end
   
