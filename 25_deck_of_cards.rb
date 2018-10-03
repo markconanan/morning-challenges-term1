@@ -18,6 +18,7 @@
 require_relative '24_card_game'
 
 class Deck
+<<<<<<< HEAD
   attr_accessor :deck, :draw
   def initialize
     @deck=[]
@@ -28,6 +29,33 @@ class Deck
       @deck.push(Card.new(:spade,@number))
       @deck.push(Card.new(:diamond,@number))
       @deck.push(Card.new(:clubs,@number))
+=======
+    attr_accessor :cards
+    
+    def initialize
+        # Create a new array of cards
+        @cards = []
+        for suit in [:spades, :diamonds, :clubs, :hearts] do
+            for rank in 1..13 do
+                @cards << Card.new(suit, rank)
+            end
+        end
+    end
+    
+    def shuffle
+        # Shuffle the remaining cards
+        @cards.shuffle!
+    end
+    
+    def draw(n=1)
+        # Draw (remove) n cards from the deck. Return those cards
+        @cards.pop(n)
+    end
+    
+    def count
+        # How many cards are left?
+        @cards.length
+>>>>>>> d785f49315f21edd5329234273e9431f9c199eea
     end
 end
     
