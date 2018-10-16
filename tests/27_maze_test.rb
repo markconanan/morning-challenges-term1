@@ -53,11 +53,7 @@ class TestMaze < Test::Unit::TestCase
         ])    
     end
     # If we reach number 3, we've finished the maze
-<<<<<<< HEAD
-    def test_finish
-=======
     def test_finish_route_1
->>>>>>> 19cb0abbbb65d615711988564ae54d46d1ac4129
         assert_equal("Finish", @maze.walk(["N","N","N","N","N","E","E","E","E","E"]))
     end
     def test_finish_route_2
@@ -95,15 +91,10 @@ class TestMaze < Test::Unit::TestCase
         assert_equal("Lost", @maze.walk(["N","E","E","N"]))
     end
     # Walls carry high voltage, so if we touch one, we're dead!
-<<<<<<< HEAD
-    def test_hit_wall
-        assert_equal("Dead", @maze.walk(["N","W","W","E","E"]))
-=======
     def test_hit_wall_1
         assert_equal("Dead", @maze.walk(["N","W","W","E","E"]))
     end
     def test_hit_wall_2
->>>>>>> 19cb0abbbb65d615711988564ae54d46d1ac4129
         assert_equal("Dead", @maze.walk(["N","N","N","N","N","E","E","E","E","N","N","E"]))
     end
 end

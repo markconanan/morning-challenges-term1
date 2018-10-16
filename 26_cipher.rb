@@ -15,11 +15,12 @@
 
 class CaesarCipher
   def initialize(shift)
-    #your code here
+    @shift=shift
   end
 
   def encode(string)
-    #your code here
+    @string=string.chars
+    
   end
   
   def decode(string)
